@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OAuth Callback</title>
+</head>
+<body>
+  <h2>Access Token:</h2>
+  <p id="token"></p>
+  <script>
+    const urlParams = new URLSearchParams(window.location.hash.substring(1));
+    const token = urlParams.get('access_token');
+    document.getElementById('token').innerText = token || 'No token found';
+  </script>
+</body>
+</html>
